@@ -1,4 +1,6 @@
-export const FormsConfig = [
+import { FormModel } from 'src/app/components/forms-list/form/form.model'
+
+export const FormsConfig: Array<FormModel> = [ 
     {
         type: 'text',   
         title: 'Test form #1',
