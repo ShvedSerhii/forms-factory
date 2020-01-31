@@ -2,3 +2,12 @@ mat-card-actions{
     display: flex;
     justify-content: flex-end;
 }
+
+.example-card {
+    margin: 20px;
+  }
+
+mat-card-content {
+    display: flex;
+    justify-content: center;
+}

@@ -2,7 +2,7 @@
     display: grid;
     margin: auto;
     height: 7vh;
-    max-width: 900px;
+    max-width: 600px;
     grid-template-columns: 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -12,4 +12,8 @@
 
 .menu{
     display: flex;
+}
+
+.mat-stroked-button{
+    margin: 20px;
 }
