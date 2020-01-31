@@ -1,8 +1,8 @@
-import { FormModel } from 'src/app/components/forms-list/form/form.model'
+import { FormModel } from 'src/app/components/forms-list/form/form.model';
 
-export const FormsConfig: Array<FormModel> = [ 
+export const FormsConfig: Array<FormModel> = [
     {
-        type: 'text',   
+        type: 'text',
         title: 'Test form #1',
         placeholder: 'Enter value',
         value: 'value',
@@ -10,8 +10,8 @@ export const FormsConfig: Array<FormModel> = [
             {name: 'field1', value: 'value1'},
             {name: 'field2', value: 'value2'}
         ]
-    },{
-        type: 'radio', 
+    }, {
+        type: 'radio',
         title: 'Test form #2',
         placeholder: 'Enter value',
         value: 'value',
@@ -19,8 +19,8 @@ export const FormsConfig: Array<FormModel> = [
             {name: 'field1', value: 'value1'},
             {name: 'field2', value: 'value2'}
         ]
-    },{
-        type: 'dataPicker', 
+    }, {
+        type: 'dataPicker',
         title: 'Test form #3',
         placeholder: 'Enter value',
         value: 'value',
@@ -30,7 +30,7 @@ export const FormsConfig: Array<FormModel> = [
         ]
     },
     {
-        type: 'select',   
+        type: 'select',
         title: 'Test form #4',
         placeholder: 'Enter value',
         value: 'value',
@@ -38,8 +38,8 @@ export const FormsConfig: Array<FormModel> = [
             {name: 'field1', value: 'value1'},
             {name: 'field2', value: 'value2'}
         ]
-    },{
-        type: 'slider', 
+    }, {
+        type: 'slider',
         title: 'Test form #5',
         placeholder: 'Enter value',
         value: 'value',
@@ -47,8 +47,8 @@ export const FormsConfig: Array<FormModel> = [
             {name: 'field1', value: 'value1'},
             {name: 'field2', value: 'value2'}
         ]
-    },{
-        type: 'checkBox', 
+    }, {
+        type: 'checkBox',
         title: 'Test form #6',
         placeholder: 'Enter value',
         value: 'value',
@@ -56,8 +56,8 @@ export const FormsConfig: Array<FormModel> = [
             {name: 'field1', value: 'value1'},
             {name: 'field2', value: 'value2'}
         ]
-    },{
-        type: 'sliderToggle', 
+    }, {
+        type: 'sliderToggle',
         title: 'Test form #7',
         placeholder: 'Enter value',
         value: 'value',
@@ -66,4 +66,4 @@ export const FormsConfig: Array<FormModel> = [
             {name: 'field2', value: 'value2'}
         ]
     }
-]
+];

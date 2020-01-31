@@ -12,7 +12,7 @@ export class FormControllerService {
 
   public model: FormModel[];
 
-  constructor() { 
+  constructor() {
     if (localStorage.getItem(STORAGE_KEY)) {
       this.model = JSON.parse(localStorage.getItem(STORAGE_KEY));
     } else {
