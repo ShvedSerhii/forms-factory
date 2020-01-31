@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsConfig } from '../../../environments/forms.config'
+import { FormControllerService } from 'src/app/services/form-controller/form-controller.service';
 
 @Component({
   selector: 'app-forms-list',
@@ -7,9 +7,11 @@ import { FormsConfig } from '../../../environments/forms.config'
   styleUrls: ['./forms-list.component.scss']
 })
 export class FormsListComponent implements OnInit {
-  public forms = FormsConfig;
+  public forms;
 
-  constructor() { }
+  constructor(public formController: FormControllerService) {
+    this.forms = formController.getForms();
+  }
 
   ngOnInit() {
   }
