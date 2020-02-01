@@ -18,6 +18,7 @@ import { FormsListComponent } from './components/forms-list/forms-list.component
 import { FormComponent } from './components/forms-list/form/form.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { EditFormComponent } from './components/forms-list/edit-form/edit-form.component';
 
 
 
@@ -26,7 +27,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     AppComponent,
     FormsListComponent,
     FormComponent,
-    HeaderComponent
+    HeaderComponent,
+    EditFormComponent
   ],
   imports: [
     BrowserModule,
