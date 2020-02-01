@@ -21,7 +21,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FormsListComponent } from "./components/forms-list/forms-list.component";
 import { FormComponent } from "./components/forms-list/form/form.component";
-import { MatNativeDateModule } from "@angular/material/core";
+import { MatNativeDateModule } from '@angular/material/core';
 import { EditFormComponent } from "./components/forms-list/edit-form/edit-form.component";
 
 @NgModule({
@@ -50,11 +50,11 @@ import { EditFormComponent } from "./components/forms-list/edit-form/edit-form.c
     ReactiveFormsModule
   ],
   providers: [
-    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },
   ],
   entryComponents: [
     EditFormComponent 
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}  
+export class AppModule {}

@@ -3,6 +3,6 @@
         <button mat-button (click)="openDialog()">+ ADD NEW FORM</button>
     </div>
 </div>
-<div class="wrapper" *ngFor="let form of forms, let index of i">
-    <app-form [form]="form" [index]="index"></app-form>
+<div class="wrapper" *ngFor="let form of forms, let i = index">
+    <app-form [form]="form" [index]="i"></app-form>
 </div>

@@ -1,5 +1,7 @@
 import { FormControllerService } from './../../../services/form-controller/form-controller.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { EditFormComponent } from '../edit-form/edit-form.component';
+import { MatDialog } from '@angular/material/dialog';
 
 
 @Component({
@@ -7,17 +9,31 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
   @Input() form;
-  @Input() index;
+  @Input() index: number;
 
-  constructor(private formController: FormControllerService) { }
-
-  ngOnInit() {
+  constructor(private formController: FormControllerService, public dialog: MatDialog) { 
   }
 
   deleteForm(index) {
-    this.formController.deleteForm(index); 
+    this.formController.deleteForm(index);
+  }
+
+  public openDialog(): void {
+    const dialogRef = this.dialog.open(EditFormComponent, {
+      width: "600px",
+      data: this.formController.getCurrentForm(this.index)
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (!result) {
+        return;
+      }
+      if (result) {
+        this.formController.updateCurrentForm(result, this.index);
+      }
+    });
   }
 
 }
