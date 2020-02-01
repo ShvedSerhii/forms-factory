@@ -1,13 +1,13 @@
-import { Component } from "@angular/core";
-import { FormControllerService } from "src/app/services/form-controller/form-controller.service";
-import { MatDialog } from "@angular/material/dialog";
-import { EditFormComponent } from "./edit-form/edit-form.component";
-import { FormModel } from "./form/form.model";
+import { Component } from '@angular/core';
+import { FormControllerService } from 'src/app/services/form-controller/form-controller.service';
+import { MatDialog } from '@angular/material/dialog';
+import { EditFormComponent } from './edit-form/edit-form.component';
+import { FormModel } from './form/form.model';
 
 @Component({
-  selector: "app-forms-list",
-  templateUrl: "./forms-list.component.html",
-  styleUrls: ["./forms-list.component.scss"]
+  selector: 'app-forms-list',
+  templateUrl: './forms-list.component.html',
+  styleUrls: ['./forms-list.component.scss']
 })
 export class FormsListComponent {
   public forms;
@@ -21,15 +21,15 @@ export class FormsListComponent {
 
   public openDialog(): void {
     const dialogRef = this.dialog.open(EditFormComponent, {
-      width: "600px",
+      width: '600px',
       data: {
-        type: "text", 
-        title: "New form", 
-        placeholder: "Enter value",
-        value: "value",
+        type: 'text',
+        title: 'New form',
+        placeholder: 'Enter value',
+        value: 'value',
         data: [
-          { name: "field1", value: "value1" },
-          { name: "field2", value: "value2" }
+          { name: 'field1', value: 'value1' },
+          { name: 'field2', value: 'value2' }
         ]
       }
     });

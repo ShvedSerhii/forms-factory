@@ -1,11 +1,11 @@
-import { Component, Inject } from "@angular/core";
-import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
-import { FormModel } from "../form/form.model";
+import { Component, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { FormModel } from '../form/form.model';
 import DialogForm from './dialog.form';
 
 @Component({
-  selector: "app-edit-form",
-  templateUrl: "./edit-form.component.html",
+  selector: 'app-edit-form',
+  templateUrl: './edit-form.component.html',
   styleUrls: ['./edit-form.component.scss']
 })
 export class EditFormComponent {
@@ -18,7 +18,7 @@ export class EditFormComponent {
     this.form = new DialogForm(data);
   }
 
-  onNoClick(): void { 
+  onNoClick(): void {
     this.dialogRef.close();
   }
 }

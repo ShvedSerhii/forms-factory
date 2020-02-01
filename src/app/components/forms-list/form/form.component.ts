@@ -13,7 +13,7 @@ export class FormComponent {
   @Input() form;
   @Input() index: number;
 
-  constructor(private formController: FormControllerService, public dialog: MatDialog) { 
+  constructor(private formController: FormControllerService, public dialog: MatDialog) {
   }
 
   deleteForm(index) {
@@ -22,8 +22,8 @@ export class FormComponent {
 
   public openDialog(): void {
     const dialogRef = this.dialog.open(EditFormComponent, {
-      width: "600px",
-      data: JSON.parse(JSON.stringify(this.formController.getCurrentForm(this.index))) 
+      width: '600px',
+      data: JSON.parse(JSON.stringify(this.formController.getCurrentForm(this.index)))
     });
 
     dialogRef.afterClosed().subscribe(result => {

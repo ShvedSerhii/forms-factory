@@ -3,8 +3,8 @@ import {
   FormControl,
   FormGroup,
   Validators
-} from "@angular/forms";
-import { FormModel } from "../form/form.model";
+} from '@angular/forms';
+import { FormModel } from '../form/form.model';
 /*
       ReactiveForm structure class
     */
@@ -24,35 +24,35 @@ export default class DialogForm {
     this.formGroup = this.formBuilder.group({
       type: new FormControl(this.model.type, {
         validators: [],
-        updateOn: "change"
+        updateOn: 'change'
       }),
       title: new FormControl(this.model.title, {
         validators: [Validators.required],
-        updateOn: "change" 
+        updateOn: 'change'
       }),
       placeholder: new FormControl(this.model.placeholder, {
         validators: [],
-        updateOn: "change"
+        updateOn: 'change'
       }),
       value: new FormControl(this.model.value, {
         validators: [],
-        updateOn: "change"
+        updateOn: 'change'
       }),
       dataName1: new FormControl(this.model.data[0].name, {
         validators: [],
-        updateOn: "change"
+        updateOn: 'change'
       }),
       dataValue1: new FormControl(this.model.data[0].value, {
         validators: [],
-        updateOn: "change"
+        updateOn: 'change'
       }),
       dataName2: new FormControl(this.model.data[1].name, {
         validators: [],
-        updateOn: "change"
+        updateOn: 'change'
       }),
       dataValue2: new FormControl(this.model.data[1].value, {
         validators: [],
-        updateOn: "change"
+        updateOn: 'change'
       }),
     });
 
@@ -63,9 +63,9 @@ export default class DialogForm {
       this.model.placeholder = data.placeholder;
       this.model.value = data.value;
       this.model.data[0].name = data.dataName1;
-      this.model.data[0].value = data.dataValue1; 
+      this.model.data[0].value = data.dataValue1;
       this.model.data[1].name = data.dataName2;
-      this.model.data[1].value = data.dataValue2; 
+      this.model.data[1].value = data.dataValue2;
     });
   }
 }
