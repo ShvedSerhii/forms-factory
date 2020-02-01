@@ -23,7 +23,7 @@ export class FormComponent {
   public openDialog(): void {
     const dialogRef = this.dialog.open(EditFormComponent, {
       width: "600px",
-      data: this.formController.getCurrentForm(this.index)
+      data: JSON.parse(JSON.stringify(this.formController.getCurrentForm(this.index))) 
     });
 
     dialogRef.afterClosed().subscribe(result => {
