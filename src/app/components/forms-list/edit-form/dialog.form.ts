@@ -28,7 +28,7 @@ export default class DialogForm {
       }),
       title: new FormControl(this.model.title, {
         validators: [Validators.required],
-        updateOn: "change"
+        updateOn: "submit"
       }),
       placeholder: new FormControl(this.model.placeholder, {
         validators: [],
