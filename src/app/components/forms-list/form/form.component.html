@@ -24,7 +24,7 @@
             <ng-template ngSwitchCase="sliderToggle">
                 <mat-slide-toggle>{{form.value}}</mat-slide-toggle>
             </ng-template>
-            <ng-template ngSwitchCase="dataPicker">
+            <ng-template ngSwitchCase="datePicker">
                 <mat-form-field>
                     <input matInput [matDatepicker]="picker" [(placeholder)]="form.placeholder">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>

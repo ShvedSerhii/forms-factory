@@ -1,1 +1,116 @@
-<p>edit-form works!</p>
+<h1 mat-dialog-title>Edit form</h1>
+<div mat-dialog-content>
+  <form class="edit-data-form" [formGroup]="form.formGroup">
+    <mat-form-field>
+      <mat-select placeholder="Type" formControlName="type">
+        <mat-option value="text">
+          Text input
+        </mat-option>
+        <mat-option value="radio">
+          Radio button
+        </mat-option>
+        <mat-option value="datePicker">
+          Datepicker
+        </mat-option>
+        <mat-option value="select">
+          Select
+        </mat-option>
+        <mat-option value="slider">
+          Slider
+        </mat-option>
+        <mat-option value="checkBox">
+          Checkbox
+        </mat-option>
+        <mat-option value="sliderToggle">
+          Slide toggle
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Title" formControlName="title" />
+    </mat-form-field>
+    <div class="wrapper" [ngSwitch]="form.model.type.valueOf()">
+      <ng-template ngSwitchCase="text">
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Placeholder"
+            formControlName="placeholder"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Default value" formControlName="value" />
+        </mat-form-field>
+      </ng-template>
+      <ng-template ngSwitchCase="radio">
+        <mat-form-field>
+          <input matInput placeholder="Default value" formControlName="value" />
+        </mat-form-field>
+      </ng-template>
+      <ng-template ngSwitchCase="datePicker">
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Placeholder"
+            formControlName="placeholder"
+          />
+        </mat-form-field>
+      </ng-template>
+      <ng-template ngSwitchCase="sliderToggle">
+        <mat-form-field>
+          <input matInput placeholder="Default value" formControlName="value" />
+        </mat-form-field>
+      </ng-template>
+      <ng-template ngSwitchCase="select">
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Placeholder"
+            formControlName="placeholder"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Default value 1"
+            formControlName="dataValue1"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Default value 2"
+            formControlName="dataValue2"
+          />
+        </mat-form-field>
+      </ng-template>
+      <ng-template ngSwitchCase="checkBox">
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Name field 1"
+            formControlName="dataName1"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Name field 2"
+            formControlName="dataName2"
+          />
+        </mat-form-field>
+      </ng-template>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button
+    mat-button
+    [mat-dialog-close]="form.model"
+    cdkFocusInitial
+    [disabled]="form.formGroup.invalid"
+  >
+    Submit
+  </button>
+</div>

@@ -20,7 +20,7 @@ export const FormsConfig: Array<FormModel> = [
             {name: 'field2', value: 'value2'}
         ]
     }, {
-        type: 'dataPicker',
+        type: 'datePicker',
         title: 'Test form #3',
         placeholder: 'Enter value',
         value: 'value',

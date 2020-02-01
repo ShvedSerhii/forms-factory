@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
 import { FormControllerService } from "src/app/services/form-controller/form-controller.service";
 import { MatDialog } from "@angular/material/dialog";
-import { EditFormComponent } from './edit-form/edit-form.component';
-import { FormModel } from './form/form.model';
+import { EditFormComponent } from "./edit-form/edit-form.component";
+import { FormModel } from "./form/form.model";
 
 @Component({
   selector: "app-forms-list",
@@ -21,8 +21,17 @@ export class FormsListComponent {
 
   public openDialog(): void {
     const dialogRef = this.dialog.open(EditFormComponent, {
-      width: '600px',
-      data: new FormModel()
+      width: "600px",
+      data: {
+        type: "text", 
+        title: "New form", 
+        placeholder: "Enter value",
+        value: "value",
+        data: [
+          { name: "field1", value: "value1" },
+          { name: "field2", value: "value2" }
+        ]
+      }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -30,7 +39,7 @@ export class FormsListComponent {
         return;
       }
       if (result) {
-        console.log(result)
+        console.log(result);
       }
     });
   }

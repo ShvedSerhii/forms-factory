@@ -4,11 +4,11 @@ import {
   FormGroup,
   Validators
 } from "@angular/forms";
-import { FormModel } from "./form.model";
+import { FormModel } from "../form/form.model";
 /*
       ReactiveForm structure class
     */
-export default class EditForm {
+export default class DialogForm {
   private formBuilder: FormBuilder;
   public formGroup: FormGroup;
   public model: FormModel;
@@ -23,7 +23,7 @@ export default class EditForm {
   public createForm() {
     this.formGroup = this.formBuilder.group({
       type: new FormControl(this.model.type, {
-        validators: [Validators.required],
+        validators: [],
         updateOn: "change"
       }),
       title: new FormControl(this.model.title, {
@@ -60,12 +60,12 @@ export default class EditForm {
     this.formGroup.valueChanges.subscribe((data: any) => {
       this.model.type = data.type;
       this.model.title = data.title;
-      this.model.placeholder = data.placeholder ? data.placeholder : 'Enter value';
-      this.model.value = data.value ? data.value : 'value';
-      this.model.data[0].name = data.data[0].name ? data.data[0].name : 'field1';
-      this.model.data[0].value = data.data[0].value ? data.data[0].value : 'value1'; 
-      this.model.data[1].name = data.data[1].name ? data.data[1].name : 'field2';
-      this.model.data[1].value = data.data[1].value ? data.data[1].value : 'value2'; 
+      this.model.placeholder = data.placeholder;
+      this.model.value = data.value;
+      this.model.data[0].name = data.dataName1;
+      this.model.data[0].value = data.dataValue1; 
+      this.model.data[1].name = data.dataName2;
+      this.model.data[1].value = data.dataValue2; 
     });
   }
 }

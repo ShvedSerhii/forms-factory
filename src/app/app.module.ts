@@ -1,6 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
@@ -44,7 +45,9 @@ import { EditFormComponent } from "./components/forms-list/edit-form/edit-form.c
     MatNativeDateModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }
@@ -54,4 +57,4 @@ import { EditFormComponent } from "./components/forms-list/edit-form/edit-form.c
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {} 
+export class AppModule {}  
