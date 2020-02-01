@@ -39,7 +39,7 @@ export class FormsListComponent {
         return;
       }
       if (result) {
-        console.log(result);
+        this.formController.addForm(result);
       }
     });
   }

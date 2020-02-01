@@ -44,7 +44,18 @@
       </ng-template>
       <ng-template ngSwitchCase="radio">
         <mat-form-field>
-          <input matInput placeholder="Default value" formControlName="value" />
+          <input
+            matInput
+            placeholder="Name field 1"
+            formControlName="dataName1"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Name field 2"
+            formControlName="dataName2"
+          />
         </mat-form-field>
       </ng-template>
       <ng-template ngSwitchCase="datePicker">
