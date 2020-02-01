@@ -2,7 +2,7 @@ import { FormControllerService } from './../../../services/form-controller/form-
 import { Component, Input } from '@angular/core';
 import { EditFormComponent } from '../edit-form/edit-form.component';
 import { MatDialog } from '@angular/material/dialog';
-
+import { FormModel } from './form.model';
 
 @Component({
   selector: 'app-form',
@@ -10,20 +10,24 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
-  @Input() form;
+  @Input() form: FormModel;
   @Input() index: number;
 
-  constructor(private formController: FormControllerService, public dialog: MatDialog) {
-  }
+  constructor(
+    private formController: FormControllerService,
+    public dialog: MatDialog
+  ) {}
 
-  deleteForm(index) {
+  public deleteForm(index): void {
     this.formController.deleteForm(index);
   }
 
   public openDialog(): void {
     const dialogRef = this.dialog.open(EditFormComponent, {
       width: '600px',
-      data: JSON.parse(JSON.stringify(this.formController.getCurrentForm(this.index)))
+      data: JSON.parse(
+        JSON.stringify(this.formController.getCurrentForm(this.index))
+      )
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -35,5 +39,4 @@ export class FormComponent {
       }
     });
   }
-
 }

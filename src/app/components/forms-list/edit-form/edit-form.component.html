@@ -32,11 +32,7 @@
     <div class="wrapper" [ngSwitch]="form.model.type.valueOf()">
       <ng-template ngSwitchCase="text">
         <mat-form-field>
-          <input
-            matInput
-            placeholder="Placeholder"
-            formControlName="placeholder"
-          />
+          <input matInput placeholder="Placeholder" formControlName="placeholder" />
         </mat-form-field>
         <mat-form-field>
           <input matInput placeholder="Default value" formControlName="value" />
@@ -44,27 +40,15 @@
       </ng-template>
       <ng-template ngSwitchCase="radio">
         <mat-form-field>
-          <input
-            matInput
-            placeholder="Name field 1"
-            formControlName="dataName1"
-          />
+          <input matInput placeholder="Name field 1" formControlName="dataName1" />
         </mat-form-field>
         <mat-form-field>
-          <input
-            matInput
-            placeholder="Name field 2"
-            formControlName="dataName2"
-          />
+          <input matInput placeholder="Name field 2" formControlName="dataName2" />
         </mat-form-field>
       </ng-template>
       <ng-template ngSwitchCase="datePicker">
         <mat-form-field>
-          <input
-            matInput
-            placeholder="Placeholder"
-            formControlName="placeholder"
-          />
+          <input matInput placeholder="Placeholder" formControlName="placeholder" />
         </mat-form-field>
       </ng-template>
       <ng-template ngSwitchCase="sliderToggle">
@@ -74,41 +58,21 @@
       </ng-template>
       <ng-template ngSwitchCase="select">
         <mat-form-field>
-          <input
-            matInput
-            placeholder="Placeholder"
-            formControlName="placeholder"
-          />
+          <input matInput placeholder="Placeholder" formControlName="placeholder" />
         </mat-form-field>
         <mat-form-field>
-          <input
-            matInput
-            placeholder="Default value 1"
-            formControlName="dataValue1"
-          />
+          <input matInput placeholder="Default value 1" formControlName="dataValue1" />
         </mat-form-field>
         <mat-form-field>
-          <input
-            matInput
-            placeholder="Default value 2"
-            formControlName="dataValue2"
-          />
+          <input matInput placeholder="Default value 2" formControlName="dataValue2" />
         </mat-form-field>
       </ng-template>
       <ng-template ngSwitchCase="checkBox">
         <mat-form-field>
-          <input
-            matInput
-            placeholder="Name field 1"
-            formControlName="dataName1"
-          />
+          <input matInput placeholder="Name field 1" formControlName="dataName1" />
         </mat-form-field>
         <mat-form-field>
-          <input
-            matInput
-            placeholder="Name field 2"
-            formControlName="dataName2"
-          />
+          <input matInput placeholder="Name field 2" formControlName="dataName2" />
         </mat-form-field>
       </ng-template>
     </div>
@@ -116,12 +80,7 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button
-    mat-button
-    [mat-dialog-close]="form.model"
-    cdkFocusInitial
-    [disabled]="form.formGroup.invalid"
-  >
+  <button mat-button [mat-dialog-close]="form.model" cdkFocusInitial [disabled]="form.formGroup.invalid">
     Submit
   </button>
 </div>

@@ -10,7 +10,7 @@ import { FormModel } from './form/form.model';
   styleUrls: ['./forms-list.component.scss']
 })
 export class FormsListComponent {
-  public forms;
+  public forms: Array<FormModel>;
 
   constructor(
     public formController: FormControllerService,

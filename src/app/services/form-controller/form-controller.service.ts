@@ -2,14 +2,12 @@ import { Injectable } from '@angular/core';
 import { FormModel } from 'src/app/components/forms-list/form/form.model';
 import { FormsConfig } from '../../../environments/forms.config';
 
-
 const STORAGE_KEY = 'local_forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormControllerService {
-
   public model: FormModel[];
 
   constructor() {
