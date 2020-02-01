@@ -1,19 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControllerService } from 'src/app/services/form-controller/form-controller.service';
+import { Component } from "@angular/core";
+import { FormControllerService } from "src/app/services/form-controller/form-controller.service";
+import { MatDialog } from "@angular/material/dialog";
+import { EditFormComponent } from './edit-form/edit-form.component';
+import { FormModel } from './form/form.model';
 
 @Component({
-  selector: 'app-forms-list',
-  templateUrl: './forms-list.component.html',
-  styleUrls: ['./forms-list.component.scss']
+  selector: "app-forms-list",
+  templateUrl: "./forms-list.component.html",
+  styleUrls: ["./forms-list.component.scss"]
 })
-export class FormsListComponent implements OnInit {
+export class FormsListComponent {
   public forms;
 
-  constructor(public formController: FormControllerService) {
+  constructor(
+    public formController: FormControllerService,
+    public dialog: MatDialog
+  ) {
     this.forms = formController.getForms();
   }
 
-  ngOnInit() {
-  }
+  public openDialog(): void {
+    const dialogRef = this.dialog.open(EditFormComponent, {
+      width: '600px',
+      data: new FormModel()
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      if (!result) {
+        return;
+      }
+      if (result) {
+        console.log(result)
+      }
+    });
+  }
 }
