@@ -1,3 +1,4 @@
+import { FormControllerService } from './../../../services/form-controller/form-controller.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 
@@ -8,10 +9,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FormComponent implements OnInit {
   @Input() form;
+  @Input() index;
 
-  constructor() { }
+  constructor(private formController: FormControllerService) { }
 
   ngOnInit() {
+  }
+
+  deleteForm(index) {
+    this.formController.deleteForm(index); 
   }
 
 }
