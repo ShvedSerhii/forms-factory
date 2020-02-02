@@ -4,4 +4,6 @@ export class FormModel {
   placeholder: string;
   value: string;
   data: Array<{ name: string; value: string }>;
+  required: boolean;
+  pattern: string;
 }

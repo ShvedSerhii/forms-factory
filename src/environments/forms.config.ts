@@ -9,7 +9,9 @@ export const FormsConfig: Array<FormModel> = [
         data: [
             {name: 'field1', value: 'value1'},
             {name: 'field2', value: 'value2'}
-        ]
+        ],
+        required: true,
+        pattern: ''
     }, {
         type: 'radio',
         title: 'Test form #2',
@@ -18,7 +20,9 @@ export const FormsConfig: Array<FormModel> = [
         data: [
             {name: 'field1', value: 'value1'},
             {name: 'field2', value: 'value2'}
-        ]
+        ],
+        required: true,
+        pattern: ''
     }, {
         type: 'datePicker',
         title: 'Test form #3',
@@ -27,7 +31,9 @@ export const FormsConfig: Array<FormModel> = [
         data: [
             {name: 'field1', value: 'value1'},
             {name: 'field2', value: 'value2'}
-        ]
+        ],
+        required: true,
+        pattern: ''
     },
     {
         type: 'select',
@@ -37,7 +43,9 @@ export const FormsConfig: Array<FormModel> = [
         data: [
             {name: 'field1', value: 'value1'},
             {name: 'field2', value: 'value2'}
-        ]
+        ],
+        required: true,
+        pattern: ''
     }, {
         type: 'slider',
         title: 'Test form #5',
@@ -46,7 +54,9 @@ export const FormsConfig: Array<FormModel> = [
         data: [
             {name: 'field1', value: 'value1'},
             {name: 'field2', value: 'value2'}
-        ]
+        ],
+        required: false,
+        pattern: ''
     }, {
         type: 'checkBox',
         title: 'Test form #6',
@@ -55,7 +65,9 @@ export const FormsConfig: Array<FormModel> = [
         data: [
             {name: 'field1', value: 'value1'},
             {name: 'field2', value: 'value2'}
-        ]
+        ],
+        required: true,
+        pattern: ''
     }, {
         type: 'sliderToggle',
         title: 'Test form #7',
@@ -64,6 +76,8 @@ export const FormsConfig: Array<FormModel> = [
         data: [
             {name: 'field1', value: 'value1'},
             {name: 'field2', value: 'value2'}
-        ]
+        ],
+        required: false,
+        pattern: ''
     }
 ];
