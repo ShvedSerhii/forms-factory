@@ -54,6 +54,14 @@ export default class DialogForm {
         validators: [],
         updateOn: 'change'
       }),
+      required: new FormControl(this.model.required, {
+        validators: [],
+        updateOn: 'change'
+      }),
+      pattern: new FormControl(this.model.pattern, {
+        validators: [],
+        updateOn: 'change'
+      })
     });
 
     // form update
@@ -66,6 +74,8 @@ export default class DialogForm {
       this.model.data[0].value = data.dataValue1;
       this.model.data[1].name = data.dataName2;
       this.model.data[1].value = data.dataValue2;
+      this.model.required = data.required;
+      this.model.pattern = data.pattern;
     });
   }
 }

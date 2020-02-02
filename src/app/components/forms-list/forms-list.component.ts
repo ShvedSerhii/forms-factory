@@ -30,7 +30,9 @@ export class FormsListComponent {
         data: [
           { name: 'field1', value: 'value1' },
           { name: 'field2', value: 'value2' }
-        ]
+        ],
+        required: false,
+        pattern: ''
       }
     });
 
