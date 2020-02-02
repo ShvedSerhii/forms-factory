@@ -27,7 +27,7 @@ export class FormComponent {
       width: '600px',
       data: JSON.parse(
         JSON.stringify(this.formController.getCurrentForm(this.index))
-      )
+      ) // this strange design is a deep cloning of the object
     });
 
     dialogRef.afterClosed().subscribe(result => {
